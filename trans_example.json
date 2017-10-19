@@ -1,0 +1,14 @@
+[
+  {
+      "mongo": {
+          "database": "testdb",
+          "collection": "test",
+          "filter": null,
+          "projection": ["_id", "variation", "gene", "pathogenicity", "dbsnp", "updated_at"]
+      },
+      "elasticsearch": {
+          "index": "testdb",
+          "type": "test"
+      }
+    }
+]

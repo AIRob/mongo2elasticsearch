@@ -1,4 +1,4 @@
 .*
 !.gitignore
 *.pyc
-*.bk
+trans.json
