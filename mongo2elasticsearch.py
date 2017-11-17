@@ -38,7 +38,7 @@ class Transformer:
     def save_elasticsearch_data(self, cursor, index, doc_type):
         body = []
         for data in cursor:
-            body.append(json.dumps({"index": {"_index": index, "_type": doc_type, "_id": data['_id']}}))
+            body.append(json.dumps({"index": {"_index": index, "_type": doc_type, "_id": str(data['_id'])}}))
             del data['_id']
             body.append(json.dumps(data))
             if len(body) >= self.batch_num * 2:
